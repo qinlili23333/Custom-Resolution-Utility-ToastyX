@@ -1,3 +1,0 @@
-rm -rf ~/AppData/Local/Temp/EditorLineEnds.ttr CRU.bdsproj.local Release_Build __history
-for f in *.ico;do cp -p "$f" temp.ico;mv temp.ico "$f";done
-touch -r clean VistaAltFixUnit.hpp .
