@@ -1038,7 +1038,7 @@ bool PropertiesClass::GetDeviceID(char *Text, int TextSize)
 	return true;
 }
 //---------------------------------------------------------------------------
-bool PropertiesClass::SetDeviceID(const char *NewDeviceID)
+bool PropertiesClass::SetDeviceID(const wchar_t *NewDeviceID)
 {
 	std::snprintf(DeviceID, sizeof DeviceID, "%s", NewDeviceID);
 	Trim(DeviceID);
@@ -1156,7 +1156,7 @@ bool PropertiesClass::GetName(char *Text, int TextSize)
 	return true;
 }
 //---------------------------------------------------------------------------
-bool PropertiesClass::SetName(const char *NewName)
+bool PropertiesClass::SetName(const wchar_t *NewName)
 {
 	std::snprintf(Name, sizeof Name, "%s", NewName);
 	return true;
@@ -1188,7 +1188,7 @@ bool PropertiesClass::GetSerialNumber(char *Text, int TextSize)
 	return true;
 }
 //---------------------------------------------------------------------------
-bool PropertiesClass::SetSerialNumber(const char *NewSerialNumber)
+bool PropertiesClass::SetSerialNumber(const wchar_t *NewSerialNumber)
 {
 	std::snprintf(SerialNumber, sizeof SerialNumber, "%s", NewSerialNumber);
 	return true;

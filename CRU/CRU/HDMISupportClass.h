@@ -52,7 +52,7 @@ public:
 	bool ReadPhysicalAddress(const unsigned char *);
 	bool WritePhysicalAddress(unsigned char *);
 	bool GetPhysicalAddressText(char *, int);
-	bool SetPhysicalAddressText(const char *);
+	bool SetPhysicalAddressText(const wchar_t *);
 	bool ExtensionPossible();
 	bool GetDeepColorYCbCr444();
 	bool SetDeepColorYCbCr444(bool);

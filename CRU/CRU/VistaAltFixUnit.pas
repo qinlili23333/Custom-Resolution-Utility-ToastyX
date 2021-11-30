@@ -20,7 +20,7 @@ procedure Register;
 implementation
 
 uses
-  Messages, Themes;
+  Messages, VCL.Themes;
 
 procedure Register;
 begin

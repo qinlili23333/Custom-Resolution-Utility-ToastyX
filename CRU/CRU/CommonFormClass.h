@@ -81,10 +81,10 @@ public:		// User declarations
 	BOOL IsAppThemed();
 	bool FixButtonCaption(TButton *, int);
 	void ListBoxDrawItems(TListBox *, RECT, TOwnerDrawState, Column *, int, bool, bool);
-	void ListBoxDrawItem(TListBox *, RECT, TOwnerDrawState, const char *, bool, bool);
-	int TextToInteger(const char *);
+	void ListBoxDrawItem(TListBox *, RECT, TOwnerDrawState, const wchar_t *, bool, bool);
+	int TextToInteger(const wchar_t *);
 	bool IntegerToText(int, char *, int);
-	long long TextToDecimal(const char *, int);
+	long long TextToDecimal(const wchar_t *, int);
 	bool DecimalToText(long long, int, int, char *, int);
 };
 //---------------------------------------------------------------------------

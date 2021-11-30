@@ -407,7 +407,7 @@ bool TiledDisplayTopologyClass::GetVendorID(char *Text, int TextSize)
 	return true;
 }
 //---------------------------------------------------------------------------
-bool TiledDisplayTopologyClass::SetVendorID(const char *NewVendorID)
+bool TiledDisplayTopologyClass::SetVendorID(const wchar_t *NewVendorID)
 {
 	std::snprintf(VendorID, sizeof VendorID, "%s", NewVendorID);
 	Trim(VendorID);
@@ -421,7 +421,7 @@ bool TiledDisplayTopologyClass::GetProductID(char *Text, int TextSize)
 	return true;
 }
 //---------------------------------------------------------------------------
-bool TiledDisplayTopologyClass::SetProductID(const char *NewProductID)
+bool TiledDisplayTopologyClass::SetProductID(const wchar_t *NewProductID)
 {
 	std::snprintf(ProductID, sizeof ProductID, "%s", NewProductID);
 	Trim(ProductID);

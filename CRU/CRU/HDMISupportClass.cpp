@@ -390,7 +390,7 @@ bool HDMISupportClass::GetPhysicalAddressText(char *Text, int TextSize)
 	return true;
 }
 //---------------------------------------------------------------------------
-bool HDMISupportClass::SetPhysicalAddressText(const char *Text)
+bool HDMISupportClass::SetPhysicalAddressText(const wchar_t *Text)
 {
 	unsigned char Data[2];
 

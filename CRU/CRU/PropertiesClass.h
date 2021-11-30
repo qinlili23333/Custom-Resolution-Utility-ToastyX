@@ -104,7 +104,7 @@ public:
 	int GetCount();
 	bool GetText(int, char *, int);
 	bool GetDeviceID(char *, int);
-	bool SetDeviceID(const char *);
+	bool SetDeviceID(const wchar_t *);
 	bool SetResetID(const char *);
 	bool ResetDeviceIDPossible();
 	bool ResetDeviceID();
@@ -120,12 +120,12 @@ public:
 	bool SetYCbCr444(bool);
 	bool GetNameText(char *, int);
 	bool GetName(char *, int);
-	bool SetName(const char *);
+	bool SetName(const wchar_t *);
 	bool GetIncludeName();
 	bool SetIncludeName(bool);
 	bool GetSerialNumberText(char *, int);
 	bool GetSerialNumber(char *, int);
-	bool SetSerialNumber(const char *);
+	bool SetSerialNumber(const wchar_t *);
 	bool GetIncludeSerialNumber();
 	bool SetIncludeSerialNumber(bool);
 	bool GetRangeLimitsText(char *, int);

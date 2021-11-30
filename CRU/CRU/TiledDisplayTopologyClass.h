@@ -96,9 +96,9 @@ public:
 	int GetLeftBezelSize();
 	bool SetLeftBezelSize(int);
 	bool GetVendorID(char *, int);
-	bool SetVendorID(const char *);
+	bool SetVendorID(const wchar_t *);
 	bool GetProductID(char *, int);
-	bool SetProductID(const char *);
+	bool SetProductID(const wchar_t *);
 	bool SetDeviceID(const char *);
 	long long GetSerialID();
 	bool SetSerialID(long long);

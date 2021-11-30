@@ -25,7 +25,7 @@ USEFORM("TVResolutionFormClass.cpp", TVResolutionForm);
 USEFORM("TVResolutionListFormClass.cpp", TVResolutionListForm);
 USEFORM("VideoCapabilityFormClass.cpp", VideoCapabilityForm);
 //---------------------------------------------------------------------------
-WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
+int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
 	try
 	{

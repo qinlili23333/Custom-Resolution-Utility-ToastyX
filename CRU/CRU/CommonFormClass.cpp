@@ -266,7 +266,7 @@ void TCommonForm::ListBoxDrawItems(TListBox *ListBox, RECT Rect, TOwnerDrawState
 		ListBox->Canvas->DrawFocusRect(Rect);
 }
 //---------------------------------------------------------------------------
-void TCommonForm::ListBoxDrawItem(TListBox *ListBox, RECT Rect, TOwnerDrawState State, const char *Text, bool Enabled, bool Bold)
+void TCommonForm::ListBoxDrawItem(TListBox *ListBox, RECT Rect, TOwnerDrawState State, const wchar_t *Text, bool Enabled, bool Bold)
 {
 	RECT ItemRect;
 
@@ -288,14 +288,20 @@ void TCommonForm::ListBoxDrawItem(TListBox *ListBox, RECT Rect, TOwnerDrawState 
 	if (GetFormScale() == 8)
 		if (!IsDigit(*Text))
 			ItemRect.left++;
+	int iSize;
+	char* pszMultiByte;
 
-	DrawText(ListBox->Canvas->Handle, Text, -1, &ItemRect, DT_LEFT | DT_NOPREFIX);
+	//返回接受字符串所需缓冲区的大小，已经包含字符结尾符'\0'
+	iSize = WideCharToMultiByte(CP_ACP, 0, Text, -1, NULL, 0, NULL, NULL); //iSize =wcslen(pwsUnicode)+1=6
+	pszMultiByte = (char*)malloc(iSize*sizeof(char)); //不需要 pszMultiByte = (char*)malloc(iSize*sizeof(char)+1);
+	WideCharToMultiByte(CP_ACP, 0, Text, -1, pszMultiByte, iSize, NULL, NULL);
+	DrawText(ListBox->Canvas->Handle,pszMultiByte, -1, &ItemRect, DT_LEFT | DT_NOPREFIX);
 
 	if (State.Contains(odFocused))
 		ListBox->Canvas->DrawFocusRect(Rect);
 }
 //---------------------------------------------------------------------------
-int TCommonForm::TextToInteger(const char *Text)
+int TCommonForm::TextToInteger(const wchar_t *Text)
 {
 	long long result = TextToDecimal(Text, 0);
 
@@ -326,9 +332,9 @@ bool TCommonForm::IntegerToText(int Value, char *Text, int TextSize)
 	return DecimalToText(Value, TextSize, 0, Text, TextSize);
 }
 //---------------------------------------------------------------------------
-long long TCommonForm::TextToDecimal(const char *Text, int Digits)
+long long TCommonForm::TextToDecimal(const wchar_t *Text, int Digits)
 {
-	const char *Byte = Text;
+	const wchar_t *Byte = Text;
 
 	while (IsSpace(*Byte))
 		Byte++;
