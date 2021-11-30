@@ -87,26 +87,30 @@ object DIDDetailedResolutionListForm: TDIDDetailedResolutionListForm
       Top = 95
       Width = 21
       Height = 21
-      TabOrder = 6
-      OnClick = DetailedUpButtonClick
+      DoubleBuffered = True
       Glyph.Data = {
         6A000000424D6A000000000000003E00000028000000090000000B0000000100
         0100000000002C0000000000000000000000020000000000000000000000FFFF
         FF00FF800000E3800000E3800000E3800000E3800000E380000080800000C180
         0000E3800000F7800000FF800000}
+      ParentDoubleBuffered = False
+      TabOrder = 6
+      OnClick = DetailedUpButtonClick
     end
     object DetailedDownButton: TBitBtn
       Left = 301
       Top = 95
       Width = 21
       Height = 21
-      TabOrder = 7
-      OnClick = DetailedDownButtonClick
+      DoubleBuffered = True
       Glyph.Data = {
         6A000000424D6A000000000000003E00000028000000090000000B0000000100
         0100000000002C0000000000000000000000020000000000000000000000FFFF
         FF00FF800000F7800000E3800000C180000080800000E3800000E3800000E380
         0000E3800000E3800000FF800000}
+      ParentDoubleBuffered = False
+      TabOrder = 7
+      OnClick = DetailedDownButtonClick
     end
   end
   object FormOKButton: TButton

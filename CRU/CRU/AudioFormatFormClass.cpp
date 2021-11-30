@@ -696,7 +696,7 @@ void __fastcall TAudioFormatForm::Channels3DChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	AudioFormat->SetChannels3D(TextToInteger(Channels3D->Text.c_str()));
+	AudioFormat->SetChannels3D(TextToInteger(Channels3D->Text.t_str()));
 	Refresh(Channels3D);
 }
 //---------------------------------------------------------------------------
@@ -739,7 +739,7 @@ void __fastcall TAudioFormatForm::BitRateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	AudioFormat->SetBitRate(TextToInteger(BitRate->Text.c_str()));
+	AudioFormat->SetBitRate(TextToInteger(BitRate->Text.t_str()));
 	Refresh(BitRate);
 }
 //---------------------------------------------------------------------------
@@ -753,7 +753,7 @@ void __fastcall TAudioFormatForm::FlagsChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	AudioFormat->SetFlags(TextToInteger(Flags->Text.c_str()));
+	AudioFormat->SetFlags(TextToInteger(Flags->Text.t_str()));
 	Refresh(Flags);
 }
 //---------------------------------------------------------------------------
@@ -767,7 +767,7 @@ void __fastcall TAudioFormatForm::ProfileChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	AudioFormat->SetProfile(TextToInteger(Profile->Text.c_str()));
+	AudioFormat->SetProfile(TextToInteger(Profile->Text.t_str()));
 	Refresh(Profile);
 }
 //---------------------------------------------------------------------------
@@ -836,7 +836,7 @@ void __fastcall TAudioFormatForm::ExtensionChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	AudioFormat->SetExtension(TextToInteger(Extension->Text.c_str()));
+	AudioFormat->SetExtension(TextToInteger(Extension->Text.t_str()));
 	Refresh(Extension);
 }
 //---------------------------------------------------------------------------
@@ -850,7 +850,7 @@ void __fastcall TAudioFormatForm::ExtensionFlagsChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	AudioFormat->SetExtensionFlags(TextToInteger(ExtensionFlags->Text.c_str()));
+	AudioFormat->SetExtensionFlags(TextToInteger(ExtensionFlags->Text.t_str()));
 	Refresh(ExtensionFlags);
 }
 //---------------------------------------------------------------------------

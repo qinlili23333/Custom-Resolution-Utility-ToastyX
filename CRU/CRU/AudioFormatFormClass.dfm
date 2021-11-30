@@ -51,7 +51,6 @@ object AudioFormatForm: TAudioFormatForm
       Width = 136
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 0
       OnChange = FormatComboBoxChange
     end
@@ -61,7 +60,6 @@ object AudioFormatForm: TAudioFormatForm
       Width = 63
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 1
       OnChange = ChannelsComboBoxChange
     end
@@ -81,7 +79,6 @@ object AudioFormatForm: TAudioFormatForm
       Width = 103
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 3
       OnChange = LevelComboBoxChange
     end

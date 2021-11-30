@@ -193,7 +193,7 @@ void __fastcall TDIDDetailedResolutionListForm::FormShow(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TDIDDetailedResolutionListForm::DetailedListBoxDrawItem(TWinControl *Control, int Index, TRect &Rect, TOwnerDrawState State)
 {
-	ListBoxDrawItem(DetailedListBox, Rect, State, DetailedListBox->Items->Strings[Index].c_str(), DIDDetailedResolutionList->EditPossible(Index), false);
+	ListBoxDrawItem(DetailedListBox, Rect, State, DetailedListBox->Items->Strings[Index].t_str(), DIDDetailedResolutionList->EditPossible(Index), false);
 }
 //---------------------------------------------------------------------------
 void __fastcall TDIDDetailedResolutionListForm::DetailedListBoxClick(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)

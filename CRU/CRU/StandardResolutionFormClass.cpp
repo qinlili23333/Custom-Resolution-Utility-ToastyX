@@ -174,7 +174,7 @@ void __fastcall TStandardResolutionForm::WidthChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	StandardResolution->SetWidth(TextToInteger(Width->Text.c_str()));
+	StandardResolution->SetWidth(TextToInteger(Width->Text.t_str()));
 	Refresh(Width);
 }
 //---------------------------------------------------------------------------
@@ -188,7 +188,7 @@ void __fastcall TStandardResolutionForm::HeightChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	StandardResolution->SetHeight(TextToInteger(Height->Text.c_str()));
+	StandardResolution->SetHeight(TextToInteger(Height->Text.t_str()));
 	Refresh(Height);
 }
 //---------------------------------------------------------------------------
@@ -202,7 +202,7 @@ void __fastcall TStandardResolutionForm::RateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	StandardResolution->SetRate(TextToInteger(Rate->Text.c_str()));
+	StandardResolution->SetRate(TextToInteger(Rate->Text.t_str()));
 	Refresh(Rate);
 }
 //---------------------------------------------------------------------------

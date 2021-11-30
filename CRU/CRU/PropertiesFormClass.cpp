@@ -349,7 +349,7 @@ void __fastcall TPropertiesForm::DeviceIDChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	Properties->SetDeviceID(DeviceID->Text.c_str());
+	Properties->SetDeviceID(DeviceID->Text.t_str());
 	Refresh(DeviceIDGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -369,7 +369,7 @@ void __fastcall TPropertiesForm::SerialIDChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	Properties->SetSerialID(TextToDecimal(SerialID->Text.c_str(), 0));
+	Properties->SetSerialID(TextToDecimal(SerialID->Text.t_str(), 0));
 	Refresh(DeviceIDGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -410,7 +410,7 @@ void __fastcall TPropertiesForm::NameChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	Properties->SetName(Name->Text.c_str());
+	Properties->SetName(Name->Text.t_str());
 	Refresh(NameGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -433,7 +433,7 @@ void __fastcall TPropertiesForm::SerialNumberChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	Properties->SetSerialNumber(SerialNumber->Text.c_str());
+	Properties->SetSerialNumber(SerialNumber->Text.t_str());
 	Refresh(SerialNumberGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -456,7 +456,7 @@ void __fastcall TPropertiesForm::MinVRateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	Properties->SetMinVRate(TextToInteger(MinVRate->Text.c_str()));
+	Properties->SetMinVRate(TextToInteger(MinVRate->Text.t_str()));
 	Refresh(RangeLimitsGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -470,7 +470,7 @@ void __fastcall TPropertiesForm::MaxVRateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	Properties->SetMaxVRate(TextToInteger(MaxVRate->Text.c_str()));
+	Properties->SetMaxVRate(TextToInteger(MaxVRate->Text.t_str()));
 	Refresh(RangeLimitsGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -484,7 +484,7 @@ void __fastcall TPropertiesForm::MinHRateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	Properties->SetMinHRate(TextToInteger(MinHRate->Text.c_str()));
+	Properties->SetMinHRate(TextToInteger(MinHRate->Text.t_str()));
 	Refresh(RangeLimitsGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -498,7 +498,7 @@ void __fastcall TPropertiesForm::MaxHRateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	Properties->SetMaxHRate(TextToInteger(MaxHRate->Text.c_str()));
+	Properties->SetMaxHRate(TextToInteger(MaxHRate->Text.t_str()));
 	Refresh(RangeLimitsGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -512,7 +512,7 @@ void __fastcall TPropertiesForm::MaxPClockChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	Properties->SetMaxPClock(TextToInteger(MaxPClock->Text.c_str()));
+	Properties->SetMaxPClock(TextToInteger(MaxPClock->Text.t_str()));
 	Refresh(RangeLimitsGroupBox);
 }
 //---------------------------------------------------------------------------

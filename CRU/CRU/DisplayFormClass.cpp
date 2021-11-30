@@ -26,7 +26,12 @@ __fastcall TDisplayForm::TDisplayForm(TComponent *Owner) : TCommonForm(Owner)
 //---------------------------------------------------------------------------
 void TDisplayForm::FatalError(const char *Message)
 {
-	Application->MessageBox(Message, "Error", MB_ICONERROR);
+	wchar_t* Msg;
+	int iSize;
+	iSize = MultiByteToWideChar(CP_ACP, 0, Message , -1, NULL, 0);
+	Msg = (wchar_t *)malloc(iSize*sizeof(wchar_t));
+	MultiByteToWideChar(CP_ACP, 0, Message , -1, Msg , iSize);
+	Application->MessageBox(Msg, L"Error", MB_ICONERROR);
 	exit(1);
 }
 //---------------------------------------------------------------------------
@@ -959,7 +964,7 @@ void __fastcall TDisplayForm::EstablishedResetButtonClick(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TDisplayForm::DetailedListBoxDrawItem(TWinControl *Control, int Index, TRect &Rect, TOwnerDrawState State)
 {
-	ListBoxDrawItem(DetailedListBox, Rect, State, DetailedListBox->Items->Strings[Index].c_str(), Display->DetailedResolutions()->EditPossible(Index), false);
+	ListBoxDrawItem(DetailedListBox, Rect, State, DetailedListBox->Items->Strings[Index].t_str(), Display->DetailedResolutions()->EditPossible(Index), false);
 }
 //---------------------------------------------------------------------------
 void __fastcall TDisplayForm::DetailedListBoxClick(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)
@@ -1060,7 +1065,7 @@ void __fastcall TDisplayForm::StandardListBoxDrawItem(TWinControl *Control, int 
 	if (Display->StandardResolutions()->Get(Index, StandardResolution))
 		Supported = StandardResolution.IsSupported();
 
-	ListBoxDrawItem(StandardListBox, Rect, State, StandardListBox->Items->Strings[Index].c_str(), Supported, false);
+	ListBoxDrawItem(StandardListBox, Rect, State, StandardListBox->Items->Strings[Index].t_str(), Supported, false);
 }
 //---------------------------------------------------------------------------
 void __fastcall TDisplayForm::StandardListBoxClick(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)
@@ -1160,7 +1165,7 @@ void __fastcall TDisplayForm::ExtensionListBoxDrawItem(TWinControl *Control, int
 	if (Display->ExtensionBlocks()->Get(Index, ExtensionBlock))
 		Supported = ExtensionBlock.IsSupported();
 
-	ListBoxDrawItem(ExtensionListBox, Rect, State, ExtensionListBox->Items->Strings[Index].c_str(), Supported, false);
+	ListBoxDrawItem(ExtensionListBox, Rect, State, ExtensionListBox->Items->Strings[Index].t_str(), Supported, false);
 }
 //---------------------------------------------------------------------------
 void __fastcall TDisplayForm::ExtensionListBoxClick(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)
@@ -1307,7 +1312,7 @@ void __fastcall TDisplayForm::DisplayImportButtonClick(TObject *Sender)
 	if (GetOpenFileName(&OpenFileName))
 	{
 		if (!Display->Import(FileName, Complete))
-			Application->MessageBox("Failed to import file.", "Import", MB_ICONERROR);
+			Application->MessageBox(L"Failed to import file.", L"Import", MB_ICONERROR);
 
 		RefreshDisplayComboBox();
 		Refresh(NULL, -1);
@@ -1347,7 +1352,7 @@ void __fastcall TDisplayForm::DisplayExportButtonClick(TObject *Sender)
 		Name[SaveFileName.nFileExtension - SaveFileName.nFileOffset - 1] = 0;
 
 		if (!Display->Export(FileName, SaveFileName.nFilterIndex, Name))
-			Application->MessageBox("Failed to write file.", "Export", MB_ICONERROR);
+			Application->MessageBox(L"Failed to write file.", L"Export", MB_ICONERROR);
 	}
 }
 //---------------------------------------------------------------------------

@@ -51,7 +51,6 @@ object HDMIResolutionForm: THDMIResolutionForm
       Width = 136
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 0
       OnChange = ModeComboBoxChange
     end
@@ -61,7 +60,6 @@ object HDMIResolutionForm: THDMIResolutionForm
       Width = 94
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 1
       OnChange = FormatComboBoxChange
     end

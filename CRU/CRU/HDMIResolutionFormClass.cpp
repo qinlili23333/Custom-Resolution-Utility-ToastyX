@@ -182,7 +182,7 @@ void __fastcall THDMIResolutionForm::CodeChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	HDMIResolution->SetCode(TextToInteger(Code->Text.c_str()));
+	HDMIResolution->SetCode(TextToInteger(Code->Text.t_str()));
 	Refresh(Code);
 }
 //---------------------------------------------------------------------------

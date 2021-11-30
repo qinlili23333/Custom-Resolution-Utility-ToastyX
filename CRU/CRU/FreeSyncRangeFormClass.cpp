@@ -117,7 +117,7 @@ void __fastcall TFreeSyncRangeForm::MinVRateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	FreeSyncRange->SetMinVRate(TextToInteger(MinVRate->Text.c_str()));
+	FreeSyncRange->SetMinVRate(TextToInteger(MinVRate->Text.t_str()));
 	Refresh(RangeLimitsGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -131,7 +131,7 @@ void __fastcall TFreeSyncRangeForm::MaxVRateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	FreeSyncRange->SetMaxVRate(TextToInteger(MaxVRate->Text.c_str()));
+	FreeSyncRange->SetMaxVRate(TextToInteger(MaxVRate->Text.t_str()));
 	Refresh(RangeLimitsGroupBox);
 }
 //---------------------------------------------------------------------------

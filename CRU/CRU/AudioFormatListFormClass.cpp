@@ -240,7 +240,7 @@ void __fastcall TAudioFormatListForm::AudioListBoxDrawItem(TWinControl *Control,
 		return;
 	}
 
-	ListBoxDrawItem(AudioListBox, Rect, State, AudioListBox->Items->Strings[Index].c_str(), false, false);
+	ListBoxDrawItem(AudioListBox, Rect, State, AudioListBox->Items->Strings[Index].t_str(), false, false);
 }
 //---------------------------------------------------------------------------
 void __fastcall TAudioFormatListForm::AudioListBoxClick(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)

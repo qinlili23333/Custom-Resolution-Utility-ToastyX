@@ -631,7 +631,7 @@ void __fastcall THDMI2SupportForm::TMDSRateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	HDMI2Support->SetTMDSRate(TextToInteger(TMDSRate->Text.c_str()));
+	HDMI2Support->SetTMDSRate(TextToInteger(TMDSRate->Text.t_str()));
 	Refresh(TMDSRateGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -684,7 +684,7 @@ void __fastcall THDMI2SupportForm::MinVRateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	HDMI2Support->SetMinRefreshRate(TextToInteger(MinVRate->Text.c_str()));
+	HDMI2Support->SetMinRefreshRate(TextToInteger(MinVRate->Text.t_str()));
 	Refresh(RefreshRateGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -698,7 +698,7 @@ void __fastcall THDMI2SupportForm::MaxVRateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	HDMI2Support->SetMaxRefreshRate(TextToInteger(MaxVRate->Text.c_str()));
+	HDMI2Support->SetMaxRefreshRate(TextToInteger(MaxVRate->Text.t_str()));
 	Refresh(RefreshRateGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -740,7 +740,7 @@ void __fastcall THDMI2SupportForm::DSCChunkSizeChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	HDMI2Support->SetDSCChunkSize(TextToInteger(DSCChunkSize->Text.c_str()));
+	HDMI2Support->SetDSCChunkSize(TextToInteger(DSCChunkSize->Text.t_str()));
 	Refresh(DSCGroupBox);
 }
 //---------------------------------------------------------------------------

@@ -719,7 +719,7 @@ void __fastcall TExtensionBlockForm::ExtensionResetButtonClick(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TExtensionBlockForm::DetailedListBoxDrawItem(TWinControl *Control, int Index, TRect &Rect, TOwnerDrawState State)
 {
-	ListBoxDrawItem(DetailedListBox, Rect, State, DetailedListBox->Items->Strings[Index].c_str(), ExtensionBlock->DetailedResolutions()->EditPossible(Index), false);
+	ListBoxDrawItem(DetailedListBox, Rect, State, DetailedListBox->Items->Strings[Index].t_str(), ExtensionBlock->DetailedResolutions()->EditPossible(Index), false);
 }
 //---------------------------------------------------------------------------
 void __fastcall TExtensionBlockForm::DetailedListBoxClick(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)
@@ -839,7 +839,7 @@ void __fastcall TExtensionBlockForm::CEADataListBoxDrawItem(TWinControl *Control
 		return;
 	}
 
-	ListBoxDrawItem(CEADataListBox, Rect, State, CEADataListBox->Items->Strings[Index].c_str(), false, false);
+	ListBoxDrawItem(CEADataListBox, Rect, State, CEADataListBox->Items->Strings[Index].t_str(), false, false);
 }
 //---------------------------------------------------------------------------
 void __fastcall TExtensionBlockForm::CEADataListBoxClick(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)
@@ -1331,7 +1331,7 @@ void __fastcall TExtensionBlockForm::StandardListBoxDrawItem(TWinControl *Contro
 	if (ExtensionBlock->StandardResolutions()->Get(Index, StandardResolution))
 		Supported = StandardResolution.IsSupported();
 
-	ListBoxDrawItem(StandardListBox, Rect, State, StandardListBox->Items->Strings[Index].c_str(), Supported, false);
+	ListBoxDrawItem(StandardListBox, Rect, State, StandardListBox->Items->Strings[Index].t_str(), Supported, false);
 }
 //---------------------------------------------------------------------------
 void __fastcall TExtensionBlockForm::StandardListBoxClick(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)
@@ -1450,7 +1450,7 @@ void __fastcall TExtensionBlockForm::DIDDataListBoxDrawItem(TWinControl *Control
 		return;
 	}
 
-	ListBoxDrawItem(DIDDataListBox, Rect, State, DIDDataListBox->Items->Strings[Index].c_str(), false, false);
+	ListBoxDrawItem(DIDDataListBox, Rect, State, DIDDataListBox->Items->Strings[Index].t_str(), false, false);
 }
 //---------------------------------------------------------------------------
 void __fastcall TExtensionBlockForm::DIDDataListBoxClick(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)

@@ -222,7 +222,7 @@ void __fastcall TTVResolutionListForm::TVListBoxDrawItem(TWinControl *Control, i
 		Native = TVResolution.GetNative();
 	}
 
-	ListBoxDrawItem(TVListBox, Rect, State, TVListBox->Items->Strings[Index].c_str(), Supported, Native);
+	ListBoxDrawItem(TVListBox, Rect, State, TVListBox->Items->Strings[Index].t_str(), Supported, Native);
 }
 //---------------------------------------------------------------------------
 void __fastcall TTVResolutionListForm::TVListBoxClick(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)

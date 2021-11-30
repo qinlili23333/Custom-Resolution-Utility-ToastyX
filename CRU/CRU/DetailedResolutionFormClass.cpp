@@ -719,7 +719,7 @@ void __fastcall TDetailedResolutionForm::HActiveChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetHActive(TextToInteger(HActive->Text.c_str()));
+	DetailedResolution->SetHActive(TextToInteger(HActive->Text.t_str()));
 	Refresh(ParametersGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -733,7 +733,7 @@ void __fastcall TDetailedResolutionForm::HFrontChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetHFront(TextToInteger(HFront->Text.c_str()));
+	DetailedResolution->SetHFront(TextToInteger(HFront->Text.t_str()));
 	Refresh(ParametersGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -747,7 +747,7 @@ void __fastcall TDetailedResolutionForm::HSyncChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetHSync(TextToInteger(HSync->Text.c_str()));
+	DetailedResolution->SetHSync(TextToInteger(HSync->Text.t_str()));
 	Refresh(ParametersGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -761,7 +761,7 @@ void __fastcall TDetailedResolutionForm::HBackChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetHBack(TextToInteger(HBack->Text.c_str()));
+	DetailedResolution->SetHBack(TextToInteger(HBack->Text.t_str()));
 	Refresh(ParametersGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -775,7 +775,7 @@ void __fastcall TDetailedResolutionForm::HBlankChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetHBlank(TextToInteger(HBlank->Text.c_str()));
+	DetailedResolution->SetHBlank(TextToInteger(HBlank->Text.t_str()));
 	Refresh(ParametersGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -789,7 +789,7 @@ void __fastcall TDetailedResolutionForm::HTotalChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetHTotal(TextToInteger(HTotal->Text.c_str()));
+	DetailedResolution->SetHTotal(TextToInteger(HTotal->Text.t_str()));
 	Refresh(ParametersGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -812,7 +812,7 @@ void __fastcall TDetailedResolutionForm::VActiveChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetVActive(TextToInteger(VActive->Text.c_str()));
+	DetailedResolution->SetVActive(TextToInteger(VActive->Text.t_str()));
 	Refresh(ParametersGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -826,7 +826,7 @@ void __fastcall TDetailedResolutionForm::VFrontChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetVFront(TextToInteger(VFront->Text.c_str()));
+	DetailedResolution->SetVFront(TextToInteger(VFront->Text.t_str()));
 	Refresh(ParametersGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -840,7 +840,7 @@ void __fastcall TDetailedResolutionForm::VSyncChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetVSync(TextToInteger(VSync->Text.c_str()));
+	DetailedResolution->SetVSync(TextToInteger(VSync->Text.t_str()));
 	Refresh(ParametersGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -854,7 +854,7 @@ void __fastcall TDetailedResolutionForm::VBackChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetVBack(TextToInteger(VBack->Text.c_str()));
+	DetailedResolution->SetVBack(TextToInteger(VBack->Text.t_str()));
 	Refresh(ParametersGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -868,7 +868,7 @@ void __fastcall TDetailedResolutionForm::VBlankChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetVBlank(TextToInteger(VBlank->Text.c_str()));
+	DetailedResolution->SetVBlank(TextToInteger(VBlank->Text.t_str()));
 	Refresh(ParametersGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -882,7 +882,7 @@ void __fastcall TDetailedResolutionForm::VTotalChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetVTotal(TextToInteger(VTotal->Text.c_str()));
+	DetailedResolution->SetVTotal(TextToInteger(VTotal->Text.t_str()));
 	Refresh(ParametersGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -941,7 +941,7 @@ void __fastcall TDetailedResolutionForm::VRateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetVRate(TextToDecimal(VRate->Text.c_str(), VRateDigits));
+	DetailedResolution->SetVRate(TextToDecimal(VRate->Text.t_str(), VRateDigits));
 	Refresh(FrequencyGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -955,7 +955,7 @@ void __fastcall TDetailedResolutionForm::HRateChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetHRate(TextToDecimal(HRate->Text.c_str(), HRateDigits));
+	DetailedResolution->SetHRate(TextToDecimal(HRate->Text.t_str(), HRateDigits));
 	Refresh(FrequencyGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -969,7 +969,7 @@ void __fastcall TDetailedResolutionForm::PClockChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	DetailedResolution->SetPClock(TextToDecimal(PClock->Text.c_str(), PClockDigits));
+	DetailedResolution->SetPClock(TextToDecimal(PClock->Text.t_str(), PClockDigits));
 	Refresh(FrequencyGroupBox);
 }
 //---------------------------------------------------------------------------

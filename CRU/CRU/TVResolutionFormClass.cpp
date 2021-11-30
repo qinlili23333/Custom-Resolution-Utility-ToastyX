@@ -193,7 +193,7 @@ void __fastcall TTVResolutionForm::CodeChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TVResolution->SetCode(TextToInteger(Code->Text.c_str()));
+	TVResolution->SetCode(TextToInteger(Code->Text.t_str()));
 	Refresh(Code);
 }
 //---------------------------------------------------------------------------

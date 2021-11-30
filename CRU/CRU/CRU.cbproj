@@ -1,0 +1,518 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{7B406AD1-EE4B-48FD-A332-EA9D911407F2}</ProjectGuid>
+			<ProjectType>CppVCLApplication</ProjectType>
+			<MainSource>CRU.cpp</MainSource>
+			<Config Condition="'$(Config)'==''">Release</Config>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<BCC_EnableBatchCompilation>true</BCC_EnableBatchCompilation>
+			<LinkPackageStatics>rtl.lib;vcl.lib</LinkPackageStatics>
+			<BRCC_Defines>_RTLDLL;NO_STRICT;$(BRCC_Defines)</BRCC_Defines>
+			<PackageImports>vclx.bpi;vcl.bpi;rtl.bpi;dbrtl.bpi;vcldb.bpi;adortl.bpi;dbxcds.bpi;dbexpress.bpi;xmlrtl.bpi;vclie.bpi;inet.bpi;inetdbbde.bpi;inetdbxpress.bpi;soaprtl.bpi;dsnap.bpi;bdertl.bpi;vcldbx.bpi</PackageImports>
+			<TASM_Defines>_RTLDLL;NO_STRICT;$(TASM_Defines)</TASM_Defines>
+			<DCC_ResourcePath>Custom Resolution Utility;$(DCC_ResourcePath)</DCC_ResourcePath>
+			<ILINK_AppType>Windows</ILINK_AppType>
+			<BCC_IncludePath>Custom Resolution Utility;$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;$(BCC_IncludePath)</BCC_IncludePath>
+			<BRCC_IncludePath>Custom Resolution Utility;$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;$(BRCC_IncludePath)</BRCC_IncludePath>
+			<DCC_IncludePath>Custom Resolution Utility;..;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_IncludePath)</DCC_IncludePath>
+			<BCC_PCHCache>true</BCC_PCHCache>
+			<TASM_IncludePath>Custom Resolution Utility;$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;$(TASM_IncludePath)</TASM_IncludePath>
+			<DCC_UnitSearchPath>Custom Resolution Utility;..;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<BCC_GenerateWindowsApp>true</BCC_GenerateWindowsApp>
+			<OutputExt>exe</OutputExt>
+			<BCC_GenerateMultithreaded>true</BCC_GenerateMultithreaded>
+			<ILINK_ObjectSearchPath>Custom Resolution Utility;$(ILINK_ObjectSearchPath)</ILINK_ObjectSearchPath>
+			<AllPackageLibs>rtl.lib;vcl.lib</AllPackageLibs>
+			<BCC_Defines>_RTLDLL;NO_STRICT;$(BCC_Defines)</BCC_Defines>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<DCC_ObjPath>Custom Resolution Utility;$(DCC_ObjPath)</DCC_ObjPath>
+			<Multithreaded>true</Multithreaded>
+			<ILINK_LibraryPath>Custom Resolution Utility;$(BDS)\lib;$(BDS)\lib\obj;$(BDS)\lib\psdk;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BCC_Defines>_DEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+			<BCC_UserSuppliedOptions> -k</BCC_UserSuppliedOptions>
+			<ILINK_LibraryPath>$(BDS)\lib\debug;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<DCC_Define>DEBUG;$(DCC_Define);$(DCC_Define)</DCC_Define>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<BCC_Defines>NDEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+			<IntermediateOutputDir>Release_Build</IntermediateOutputDir>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<TASM_Debugging>None</TASM_Debugging>
+			<ILINK_LibraryPath>$(BDS)\lib\release;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_UserSuppliedOptions> -r</BCC_UserSuppliedOptions>
+		</PropertyGroup>
+		<ItemGroup>
+			<CppCompile Include="HDMI2SupportClass.cpp">
+				<BuildOrder>43</BuildOrder>
+				<DependentOn>HDMI2SupportClass.h</DependentOn>
+				<BuildOrder>0</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="HDMI2SupportFormClass.cpp">
+				<BuildOrder>44</BuildOrder>
+				<Form>HDMI2SupportForm</Form>
+				<DependentOn>HDMI2SupportFormClass.h</DependentOn>
+				<BuildOrder>1</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="HDMISupportClass.cpp">
+				<BuildOrder>41</BuildOrder>
+				<DependentOn>HDMISupportClass.h</DependentOn>
+				<BuildOrder>2</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="HDMISupportFormClass.cpp">
+				<BuildOrder>42</BuildOrder>
+				<Form>HDMISupportForm</Form>
+				<DependentOn>HDMISupportFormClass.h</DependentOn>
+				<BuildOrder>3</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="ItemClass.cpp">
+				<BuildOrder>47</BuildOrder>
+				<DependentOn>ItemClass.h</DependentOn>
+				<BuildOrder>4</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="ListClass.cpp">
+				<BuildOrder>48</BuildOrder>
+				<DependentOn>ListClass.h</DependentOn>
+				<BuildOrder>5</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="HDRStaticMetadataClass.cpp">
+				<BuildOrder>45</BuildOrder>
+				<DependentOn>HDRStaticMetadataClass.h</DependentOn>
+				<BuildOrder>6</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="HDRStaticMetadataFormClass.cpp">
+				<BuildOrder>46</BuildOrder>
+				<Form>HDRStaticMetadataForm</Form>
+				<DependentOn>HDRStaticMetadataFormClass.h</DependentOn>
+				<BuildOrder>7</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="ExtensionBlockListClass.cpp">
+				<BuildOrder>35</BuildOrder>
+				<DependentOn>ExtensionBlockListClass.h</DependentOn>
+				<BuildOrder>8</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="FreeSyncRangeClass.cpp">
+				<BuildOrder>36</BuildOrder>
+				<DependentOn>FreeSyncRangeClass.h</DependentOn>
+				<BuildOrder>9</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="ExtensionBlockClass.cpp">
+				<BuildOrder>33</BuildOrder>
+				<DependentOn>ExtensionBlockClass.h</DependentOn>
+				<BuildOrder>10</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="ExtensionBlockFormClass.cpp">
+				<BuildOrder>34</BuildOrder>
+				<Form>ExtensionBlockForm</Form>
+				<DependentOn>ExtensionBlockFormClass.h</DependentOn>
+				<BuildOrder>11</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="HDMIResolutionFormClass.cpp">
+				<BuildOrder>39</BuildOrder>
+				<Form>HDMIResolutionForm</Form>
+				<DependentOn>HDMIResolutionFormClass.h</DependentOn>
+				<BuildOrder>12</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="HDMIResolutionListClass.cpp">
+				<BuildOrder>40</BuildOrder>
+				<DependentOn>HDMIResolutionListClass.h</DependentOn>
+				<BuildOrder>13</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="FreeSyncRangeFormClass.cpp">
+				<BuildOrder>37</BuildOrder>
+				<Form>FreeSyncRangeForm</Form>
+				<DependentOn>FreeSyncRangeFormClass.h</DependentOn>
+				<BuildOrder>14</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="HDMIResolutionClass.cpp">
+				<BuildOrder>38</BuildOrder>
+				<DependentOn>HDMIResolutionClass.h</DependentOn>
+				<BuildOrder>15</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="TVResolutionFormClass.cpp">
+				<BuildOrder>59</BuildOrder>
+				<Form>TVResolutionForm</Form>
+				<DependentOn>TVResolutionFormClass.h</DependentOn>
+				<BuildOrder>16</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="TVResolutionListClass.cpp">
+				<BuildOrder>60</BuildOrder>
+				<DependentOn>TVResolutionListClass.h</DependentOn>
+				<BuildOrder>17</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="TiledDisplayTopologyFormClass.cpp">
+				<BuildOrder>57</BuildOrder>
+				<Form>TiledDisplayTopologyForm</Form>
+				<DependentOn>TiledDisplayTopologyFormClass.h</DependentOn>
+				<BuildOrder>18</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="TVResolutionClass.cpp">
+				<BuildOrder>58</BuildOrder>
+				<DependentOn>TVResolutionClass.h</DependentOn>
+				<BuildOrder>19</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="VideoCapabilityFormClass.cpp">
+				<BuildOrder>63</BuildOrder>
+				<Form>VideoCapabilityForm</Form>
+				<DependentOn>VideoCapabilityFormClass.h</DependentOn>
+				<BuildOrder>20</BuildOrder>
+			</CppCompile>
+			<DelphiCompile Include="VistaAltFixUnit.pas">
+				<BuildOrder>64</BuildOrder>
+				<BuildOrder>21</BuildOrder>
+			</DelphiCompile>
+			<CppCompile Include="TVResolutionListFormClass.cpp">
+				<BuildOrder>61</BuildOrder>
+				<Form>TVResolutionListForm</Form>
+				<DependentOn>TVResolutionListFormClass.h</DependentOn>
+				<BuildOrder>22</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="VideoCapabilityClass.cpp">
+				<BuildOrder>62</BuildOrder>
+				<DependentOn>VideoCapabilityClass.h</DependentOn>
+				<BuildOrder>23</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="SpeakerSetupClass.cpp">
+				<BuildOrder>51</BuildOrder>
+				<DependentOn>SpeakerSetupClass.h</DependentOn>
+				<BuildOrder>24</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="SpeakerSetupFormClass.cpp">
+				<BuildOrder>52</BuildOrder>
+				<Form>SpeakerSetupForm</Form>
+				<DependentOn>SpeakerSetupFormClass.h</DependentOn>
+				<BuildOrder>25</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="PropertiesClass.cpp">
+				<BuildOrder>49</BuildOrder>
+				<DependentOn>PropertiesClass.h</DependentOn>
+				<BuildOrder>26</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="PropertiesFormClass.cpp">
+				<BuildOrder>50</BuildOrder>
+				<Form>PropertiesForm</Form>
+				<DependentOn>PropertiesFormClass.h</DependentOn>
+				<BuildOrder>27</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="StandardResolutionListClass.cpp">
+				<BuildOrder>55</BuildOrder>
+				<DependentOn>StandardResolutionListClass.h</DependentOn>
+				<BuildOrder>28</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="TiledDisplayTopologyClass.cpp">
+				<BuildOrder>56</BuildOrder>
+				<DependentOn>TiledDisplayTopologyClass.h</DependentOn>
+				<BuildOrder>29</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="StandardResolutionClass.cpp">
+				<BuildOrder>53</BuildOrder>
+				<DependentOn>StandardResolutionClass.h</DependentOn>
+				<BuildOrder>30</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="StandardResolutionFormClass.cpp">
+				<BuildOrder>54</BuildOrder>
+				<Form>StandardResolutionForm</Form>
+				<DependentOn>StandardResolutionFormClass.h</DependentOn>
+				<BuildOrder>31</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="EstablishedResolutionListClass.cpp">
+				<BuildOrder>32</BuildOrder>
+				<DependentOn>EstablishedResolutionListClass.h</DependentOn>
+				<BuildOrder>32</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="AudioFormatFormClass.cpp">
+				<BuildOrder>10</BuildOrder>
+				<Form>AudioFormatForm</Form>
+				<DependentOn>AudioFormatFormClass.h</DependentOn>
+				<BuildOrder>33</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="AudioFormatListClass.cpp">
+				<BuildOrder>11</BuildOrder>
+				<DependentOn>AudioFormatListClass.h</DependentOn>
+				<BuildOrder>34</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="AddDIDDataFormClass.cpp">
+				<BuildOrder>8</BuildOrder>
+				<Form>AddDIDDataForm</Form>
+				<DependentOn>AddDIDDataFormClass.h</DependentOn>
+				<BuildOrder>35</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="AudioFormatClass.cpp">
+				<BuildOrder>9</BuildOrder>
+				<DependentOn>AudioFormatClass.h</DependentOn>
+				<BuildOrder>36</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="CEADataListClass.cpp">
+				<BuildOrder>14</BuildOrder>
+				<DependentOn>CEADataListClass.h</DependentOn>
+				<BuildOrder>37</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="ColorFormatListClass.cpp">
+				<BuildOrder>15</BuildOrder>
+				<DependentOn>ColorFormatListClass.h</DependentOn>
+				<BuildOrder>38</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="AudioFormatListFormClass.cpp">
+				<BuildOrder>12</BuildOrder>
+				<Form>AudioFormatListForm</Form>
+				<DependentOn>AudioFormatListFormClass.h</DependentOn>
+				<BuildOrder>39</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="BitListClass.cpp">
+				<BuildOrder>13</BuildOrder>
+				<DependentOn>BitListClass.h</DependentOn>
+				<BuildOrder>40</BuildOrder>
+			</CppCompile>
+			<ResourceCompile Include="Buttons.rc">
+				<BuildOrder>2</BuildOrder>
+				<Form>Buttons.res</Form>
+				<BuildOrder>41</BuildOrder>
+			</ResourceCompile>
+			<ResourceCompile Include="Import.rc">
+				<BuildOrder>3</BuildOrder>
+				<Form>ImportDialog.res</Form>
+				<BuildOrder>42</BuildOrder>
+			</ResourceCompile>
+			<CppCompile Include="CRU.cpp">
+				<BuildOrder>-1</BuildOrder>
+				<BuildOrder>0</BuildOrder>
+			</CppCompile>
+			<ResFiles Include="CRU.res">
+				<BuildOrder>-1</BuildOrder>
+				<BuildOrder>1</BuildOrder>
+			</ResFiles>
+			<CppCompile Include="AddCEADataFormClass.cpp">
+				<BuildOrder>6</BuildOrder>
+				<Form>AddCEADataForm</Form>
+				<DependentOn>AddCEADataFormClass.h</DependentOn>
+				<BuildOrder>45</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="AddDIDDataClass.cpp">
+				<BuildOrder>7</BuildOrder>
+				<DependentOn>AddDIDDataClass.h</DependentOn>
+				<BuildOrder>46</BuildOrder>
+			</CppCompile>
+			<ResourceCompile Include="Manifest.rc">
+				<BuildOrder>4</BuildOrder>
+				<Form>CRU_Manifest.res</Form>
+				<BuildOrder>47</BuildOrder>
+			</ResourceCompile>
+			<CppCompile Include="AddCEADataClass.cpp">
+				<BuildOrder>5</BuildOrder>
+				<DependentOn>AddCEADataClass.h</DependentOn>
+				<BuildOrder>48</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="DisplayClass.cpp">
+				<BuildOrder>26</BuildOrder>
+				<DependentOn>DisplayClass.h</DependentOn>
+				<BuildOrder>49</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="DisplayFormClass.cpp">
+				<BuildOrder>27</BuildOrder>
+				<Form>DisplayForm</Form>
+				<DependentOn>DisplayFormClass.h</DependentOn>
+				<BuildOrder>50</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="DIDDetailedResolutionListClass.cpp">
+				<BuildOrder>24</BuildOrder>
+				<DependentOn>DIDDetailedResolutionListClass.h</DependentOn>
+				<BuildOrder>51</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="DIDDetailedResolutionListFormClass.cpp">
+				<BuildOrder>25</BuildOrder>
+				<Form>DIDDetailedResolutionListForm</Form>
+				<DependentOn>DIDDetailedResolutionListFormClass.h</DependentOn>
+				<BuildOrder>52</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="AMDDisplayClass.cpp">
+				<BuildOrder>30</BuildOrder>
+				<DependentOn>AMDDisplayClass.h</DependentOn>
+				<BuildOrder>53</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="NVIDIADisplayClass.cpp">
+				<BuildOrder>31</BuildOrder>
+				<DependentOn>NVIDIADisplayClass.h</DependentOn>
+				<BuildOrder>54</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="DisplayListClass.cpp">
+				<BuildOrder>28</BuildOrder>
+				<DependentOn>DisplayListClass.h</DependentOn>
+				<BuildOrder>55</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="EDIDListClass.cpp">
+				<BuildOrder>29</BuildOrder>
+				<DependentOn>EDIDListClass.h</DependentOn>
+				<BuildOrder>56</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="Common.cpp">
+				<BuildOrder>18</BuildOrder>
+				<DependentOn>Common.h</DependentOn>
+				<BuildOrder>57</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="CommonFormClass.cpp">
+				<BuildOrder>19</BuildOrder>
+				<Form>CommonForm</Form>
+				<DependentOn>CommonFormClass.h</DependentOn>
+				<BuildOrder>58</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="ColorimetryClass.cpp">
+				<BuildOrder>16</BuildOrder>
+				<DependentOn>ColorimetryClass.h</DependentOn>
+				<BuildOrder>59</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="ColorimetryFormClass.cpp">
+				<BuildOrder>17</BuildOrder>
+				<Form>ColorimetryForm</Form>
+				<DependentOn>ColorimetryFormClass.h</DependentOn>
+				<BuildOrder>60</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="DetailedResolutionListClass.cpp">
+				<BuildOrder>22</BuildOrder>
+				<DependentOn>DetailedResolutionListClass.h</DependentOn>
+				<BuildOrder>61</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="DIDDataListClass.cpp">
+				<BuildOrder>23</BuildOrder>
+				<DependentOn>DIDDataListClass.h</DependentOn>
+				<BuildOrder>62</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="DetailedResolutionClass.cpp">
+				<BuildOrder>20</BuildOrder>
+				<DependentOn>DetailedResolutionClass.h</DependentOn>
+				<BuildOrder>63</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="DetailedResolutionFormClass.cpp">
+				<BuildOrder>21</BuildOrder>
+				<Form>DetailedResolutionForm</Form>
+				<DependentOn>DetailedResolutionFormClass.h</DependentOn>
+				<BuildOrder>64</BuildOrder>
+			</CppCompile>
+			<FormResources Include="HDMI2SupportFormClass.dfm"/>
+			<FormResources Include="HDMISupportFormClass.dfm"/>
+			<FormResources Include="HDRStaticMetadataFormClass.dfm"/>
+			<FormResources Include="ExtensionBlockFormClass.dfm"/>
+			<FormResources Include="HDMIResolutionFormClass.dfm"/>
+			<FormResources Include="FreeSyncRangeFormClass.dfm"/>
+			<FormResources Include="TVResolutionFormClass.dfm"/>
+			<FormResources Include="TiledDisplayTopologyFormClass.dfm"/>
+			<FormResources Include="VideoCapabilityFormClass.dfm"/>
+			<FormResources Include="TVResolutionListFormClass.dfm"/>
+			<FormResources Include="SpeakerSetupFormClass.dfm"/>
+			<FormResources Include="PropertiesFormClass.dfm"/>
+			<FormResources Include="StandardResolutionFormClass.dfm"/>
+			<FormResources Include="AudioFormatFormClass.dfm"/>
+			<FormResources Include="AddDIDDataFormClass.dfm"/>
+			<FormResources Include="AudioFormatListFormClass.dfm"/>
+			<FormResources Include="AddCEADataFormClass.dfm"/>
+			<FormResources Include="DisplayFormClass.dfm"/>
+			<FormResources Include="DIDDetailedResolutionListFormClass.dfm"/>
+			<FormResources Include="CommonFormClass.dfm"/>
+			<FormResources Include="ColorimetryFormClass.dfm"/>
+			<FormResources Include="DetailedResolutionFormClass.dfm"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Cpp.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppVCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1033</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Debugging>
+						<Debugging Name="DebugSourceDirs"/>
+					</Debugging>
+					<Parameters>
+						<Parameters Name="RunParams"/>
+						<Parameters Name="Launcher"/>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="DebugCWD"/>
+						<Parameters Name="HostApplication"/>
+						<Parameters Name="RemoteHost"/>
+						<Parameters Name="RemotePath"/>
+						<Parameters Name="RemoteParams"/>
+						<Parameters Name="RemoteLauncher"/>
+						<Parameters Name="UseRemoteLauncher">False</Parameters>
+						<Parameters Name="RemoteCWD"/>
+						<Parameters Name="RemoteDebug">False</Parameters>
+						<Parameters Name="Debug Symbols Search Path"/>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclIntraweb_100_140.bpl">VCL for the Web 10.0  Design Package for CodeGear RAD Studio</Excluded_Packages>
+					</Excluded_Packages>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+					<Source>
+						<Source Name="MainSource">CRU.cpp</Source>
+					</Source>
+				</CPlusPlusBuilder.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

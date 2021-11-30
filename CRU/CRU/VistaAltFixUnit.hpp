@@ -1,8 +1,8 @@
-// Borland C++ Builder
-// Copyright (c) 1995, 2005 by Borland Software Corporation
+// CodeGear C++Builder
+// Copyright (c) 1995, 2009 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'Vistaaltfixunit.pas' rev: 10.00
+// (DO NOT EDIT: machine generated header) 'Vistaaltfixunit.pas' rev: 21.00
 
 #ifndef VistaaltfixunitHPP
 #define VistaaltfixunitHPP
@@ -23,7 +23,7 @@ namespace Vistaaltfixunit
 {
 //-- type declarations -------------------------------------------------------
 class DELPHICLASS TVistaAltFix;
-class PASCALIMPLEMENTATION TVistaAltFix : public Classes::TComponent 
+class PASCALIMPLEMENTATION TVistaAltFix : public Classes::TComponent
 {
 	typedef Classes::TComponent inherited;
 	
@@ -47,4 +47,4 @@ using namespace Vistaaltfixunit;
 
 #pragma delphiheader end.
 //-- end unit ----------------------------------------------------------------
-#endif	// Vistaaltfixunit
+#endif	// VistaaltfixunitHPP

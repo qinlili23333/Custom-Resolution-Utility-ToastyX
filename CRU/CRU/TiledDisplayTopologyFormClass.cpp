@@ -419,7 +419,7 @@ void __fastcall TTiledDisplayTopologyForm::VendorIDChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetVendorID(VendorID->Text.c_str());
+	TiledDisplayTopology->SetVendorID(VendorID->Text.t_str());
 	Refresh(TopologyIDGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -433,7 +433,7 @@ void __fastcall TTiledDisplayTopologyForm::ProductIDChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetProductID(ProductID->Text.c_str());
+	TiledDisplayTopology->SetProductID(ProductID->Text.t_str());
 	Refresh(TopologyIDGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -447,7 +447,7 @@ void __fastcall TTiledDisplayTopologyForm::SerialIDChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetSerialID(TextToDecimal(SerialID->Text.c_str(), 0));
+	TiledDisplayTopology->SetSerialID(TextToDecimal(SerialID->Text.t_str(), 0));
 	Refresh(TopologyIDGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -491,7 +491,7 @@ void __fastcall TTiledDisplayTopologyForm::HTilesChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetHTiles(TextToInteger(HTiles->Text.c_str()));
+	TiledDisplayTopology->SetHTiles(TextToInteger(HTiles->Text.t_str()));
 	Refresh(TilesGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -505,7 +505,7 @@ void __fastcall TTiledDisplayTopologyForm::VTilesChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetVTiles(TextToInteger(VTiles->Text.c_str()));
+	TiledDisplayTopology->SetVTiles(TextToInteger(VTiles->Text.t_str()));
 	Refresh(TilesGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -519,7 +519,7 @@ void __fastcall TTiledDisplayTopologyForm::HLocationChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetHLocation(TextToInteger(HLocation->Text.c_str()));
+	TiledDisplayTopology->SetHLocation(TextToInteger(HLocation->Text.t_str()));
 	Refresh(LocationGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -533,7 +533,7 @@ void __fastcall TTiledDisplayTopologyForm::VLocationChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetVLocation(TextToInteger(VLocation->Text.c_str()));
+	TiledDisplayTopology->SetVLocation(TextToInteger(VLocation->Text.t_str()));
 	Refresh(LocationGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -547,7 +547,7 @@ void __fastcall TTiledDisplayTopologyForm::HSizeChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetHSize(TextToInteger(HSize->Text.c_str()));
+	TiledDisplayTopology->SetHSize(TextToInteger(HSize->Text.t_str()));
 	Refresh(SizeGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -561,7 +561,7 @@ void __fastcall TTiledDisplayTopologyForm::VSizeChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetVSize(TextToInteger(VSize->Text.c_str()));
+	TiledDisplayTopology->SetVSize(TextToInteger(VSize->Text.t_str()));
 	Refresh(SizeGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -575,7 +575,7 @@ void __fastcall TTiledDisplayTopologyForm::PixelMultiplierChange(TObject *Sender
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetPixelMultiplier(TextToInteger(PixelMultiplier->Text.c_str()));
+	TiledDisplayTopology->SetPixelMultiplier(TextToInteger(PixelMultiplier->Text.t_str()));
 	Refresh(BezelGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -589,7 +589,7 @@ void __fastcall TTiledDisplayTopologyForm::TopBezelSizeChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetTopBezelSize(TextToInteger(TopBezelSize->Text.c_str()));
+	TiledDisplayTopology->SetTopBezelSize(TextToInteger(TopBezelSize->Text.t_str()));
 	Refresh(BezelGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -603,7 +603,7 @@ void __fastcall TTiledDisplayTopologyForm::LeftBezelSizeChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetLeftBezelSize(TextToInteger(LeftBezelSize->Text.c_str()));
+	TiledDisplayTopology->SetLeftBezelSize(TextToInteger(LeftBezelSize->Text.t_str()));
 	Refresh(BezelGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -617,7 +617,7 @@ void __fastcall TTiledDisplayTopologyForm::RightBezelSizeChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetRightBezelSize(TextToInteger(RightBezelSize->Text.c_str()));
+	TiledDisplayTopology->SetRightBezelSize(TextToInteger(RightBezelSize->Text.t_str()));
 	Refresh(BezelGroupBox);
 }
 //---------------------------------------------------------------------------
@@ -631,7 +631,7 @@ void __fastcall TTiledDisplayTopologyForm::BottomBezelSizeChange(TObject *Sender
 	if (Refreshing)
 		return;
 
-	TiledDisplayTopology->SetBottomBezelSize(TextToInteger(BottomBezelSize->Text.c_str()));
+	TiledDisplayTopology->SetBottomBezelSize(TextToInteger(BottomBezelSize->Text.t_str()));
 	Refresh(BezelGroupBox);
 }
 //---------------------------------------------------------------------------

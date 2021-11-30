@@ -87,26 +87,30 @@ object AudioFormatListForm: TAudioFormatListForm
       Top = 160
       Width = 21
       Height = 21
-      TabOrder = 6
-      OnClick = AudioUpButtonClick
+      DoubleBuffered = True
       Glyph.Data = {
         6A000000424D6A000000000000003E00000028000000090000000B0000000100
         0100000000002C0000000000000000000000020000000000000000000000FFFF
         FF00FF800000E3800000E3800000E3800000E3800000E380000080800000C180
         0000E3800000F7800000FF800000}
+      ParentDoubleBuffered = False
+      TabOrder = 6
+      OnClick = AudioUpButtonClick
     end
     object AudioDownButton: TBitBtn
       Left = 301
       Top = 160
       Width = 21
       Height = 21
-      TabOrder = 7
-      OnClick = AudioDownButtonClick
+      DoubleBuffered = True
       Glyph.Data = {
         6A000000424D6A000000000000003E00000028000000090000000B0000000100
         0100000000002C0000000000000000000000020000000000000000000000FFFF
         FF00FF800000F7800000E3800000C180000080800000E3800000E3800000E380
         0000E3800000E3800000FF800000}
+      ParentDoubleBuffered = False
+      TabOrder = 7
+      OnClick = AudioDownButtonClick
     end
   end
   object FormOKButton: TButton

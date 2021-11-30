@@ -258,7 +258,6 @@ object HDMI2SupportForm: THDMI2SupportForm
       Width = 136
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 0
       OnChange = FRLRateComboBoxChange
     end
@@ -400,7 +399,6 @@ object HDMI2SupportForm: THDMI2SupportForm
       Width = 136
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 6
       OnChange = DSCFRLRateComboBoxChange
     end
@@ -410,7 +408,6 @@ object HDMI2SupportForm: THDMI2SupportForm
       Width = 136
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 7
       OnChange = DSCSlicesComboBoxChange
     end

@@ -255,7 +255,7 @@ void __fastcall THDRStaticMetadataForm::LuminanceChange(TObject *Sender)
 		return;
 
 	TEdit *Luminance = (TEdit *)Sender;
-	HDRStaticMetadata->SetLuminance(Luminance->Tag, TextToInteger(Luminance->Text.c_str()));
+	HDRStaticMetadata->SetLuminance(Luminance->Tag, TextToInteger(Luminance->Text.t_str()));
 	Refresh(LuminanceGroupBox);
 }
 //---------------------------------------------------------------------------

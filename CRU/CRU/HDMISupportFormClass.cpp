@@ -714,7 +714,7 @@ void __fastcall THDMISupportForm::PhysicalAddressChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	HDMISupport->SetPhysicalAddressText(PhysicalAddress->Text.c_str());
+	HDMISupport->SetPhysicalAddressText(PhysicalAddress->Text.t_str());
 	Refresh(PhysicalAddressGroupBox, -1);
 }
 //---------------------------------------------------------------------------
@@ -809,7 +809,7 @@ void __fastcall THDMISupportForm::TMDSClockChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	HDMISupport->SetTMDSClock(TextToInteger(TMDSClock->Text.c_str()));
+	HDMISupport->SetTMDSClock(TextToInteger(TMDSClock->Text.t_str()));
 	Refresh(TMDSClockGroupBox, -1);
 }
 //---------------------------------------------------------------------------
@@ -851,7 +851,7 @@ void __fastcall THDMISupportForm::VideoLatencyChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	HDMISupport->SetVideoLatency(TextToInteger(VideoLatency->Text.c_str()));
+	HDMISupport->SetVideoLatency(TextToInteger(VideoLatency->Text.t_str()));
 	Refresh(LatencyGroupBox, HDMIResolutionsListBox->ItemIndex);
 }
 //---------------------------------------------------------------------------
@@ -874,7 +874,7 @@ void __fastcall THDMISupportForm::AudioLatencyChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	HDMISupport->SetAudioLatency(TextToInteger(AudioLatency->Text.c_str()));
+	HDMISupport->SetAudioLatency(TextToInteger(AudioLatency->Text.t_str()));
 	Refresh(LatencyGroupBox, HDMIResolutionsListBox->ItemIndex);
 }
 //---------------------------------------------------------------------------
@@ -906,7 +906,7 @@ void __fastcall THDMISupportForm::InterlacedVideoLatencyChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	HDMISupport->SetInterlacedVideoLatency(TextToInteger(InterlacedVideoLatency->Text.c_str()));
+	HDMISupport->SetInterlacedVideoLatency(TextToInteger(InterlacedVideoLatency->Text.t_str()));
 	Refresh(LatencyGroupBox, HDMIResolutionsListBox->ItemIndex);
 }
 //---------------------------------------------------------------------------
@@ -929,7 +929,7 @@ void __fastcall THDMISupportForm::InterlacedAudioLatencyChange(TObject *Sender)
 	if (Refreshing)
 		return;
 
-	HDMISupport->SetInterlacedAudioLatency(TextToInteger(InterlacedAudioLatency->Text.c_str()));
+	HDMISupport->SetInterlacedAudioLatency(TextToInteger(InterlacedAudioLatency->Text.t_str()));
 	Refresh(LatencyGroupBox, HDMIResolutionsListBox->ItemIndex);
 }
 //---------------------------------------------------------------------------
@@ -946,7 +946,7 @@ void __fastcall THDMISupportForm::HDMIResolutionsListBoxDrawItem(TWinControl *Co
 	if (HDMISupport->Resolutions()->Get(Index, HDMIResolution))
 		Supported = HDMIResolution.IsSupported();
 
-	ListBoxDrawItem(HDMIResolutionsListBox, Rect, State, HDMIResolutionsListBox->Items->Strings[Index].c_str(), Supported, false);
+	ListBoxDrawItem(HDMIResolutionsListBox, Rect, State, HDMIResolutionsListBox->Items->Strings[Index].t_str(), Supported, false);
 }
 //---------------------------------------------------------------------------
 void __fastcall THDMISupportForm::HDMIResolutionsListBoxClick(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)

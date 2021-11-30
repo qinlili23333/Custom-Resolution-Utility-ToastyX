@@ -30,7 +30,6 @@ object DetailedResolutionForm: TDetailedResolutionForm
     Width = 195
     Height = 21
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 0
     OnChange = TimingComboBoxChange
   end
@@ -329,7 +328,6 @@ object DetailedResolutionForm: TDetailedResolutionForm
       Font.Height = -13
       Font.Name = 'Courier'
       Font.Style = []
-      ItemHeight = 13
       ParentFont = False
       TabOrder = 9
       OnChange = HPolarityChange
@@ -408,7 +406,6 @@ object DetailedResolutionForm: TDetailedResolutionForm
       Font.Height = -13
       Font.Name = 'Courier'
       Font.Style = []
-      ItemHeight = 13
       ParentFont = False
       TabOrder = 16
       OnChange = VPolarityChange
