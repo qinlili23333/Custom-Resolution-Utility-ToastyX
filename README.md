@@ -1,3 +1,4 @@
+# 能迁移到RAD2010上正常构建是我的能力极限了，你们谁有能力继续往前迁移接着干吧我实在无能为力了
 # Custom Resolution Utility (CRU)
 Custom Resolution Utility (CRU) allows custom resolutions to be defined for both AMD/ATI and NVIDIA GPUs by creating EDID overrides directly in the registry without dealing with .inf files.
 
